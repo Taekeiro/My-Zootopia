@@ -48,20 +48,35 @@
           margin: 50px;
         }
 
-        .card__title {
-          color: @gray-dark;
-          font-size: 1.25rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-        }
+.card__title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
-        .card__text {
-          flex: 1 1 auto;
-          font-size: 0.95rem;
-          line-height: 2;
-          margin-bottom: 1.25rem;
-        }
+  .card__text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .card__details {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .card__detail {
+    margin-bottom: 5px;
+  }
+
+  .cards__item {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
         </style>
     </head>
     <body>
@@ -70,200 +85,238 @@
             <li class='cards__item'>
   <div class='card__title'>American Foxhound</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Canis lupus<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Type:</strong> Hound<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 10 to 12 years<br/>
-      <strong>Distinctive Feature:</strong> Long legs and wide, flat ears<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class='card__detail'><strong>Location:</strong> North-America</li>
+  <li class='card__detail'><strong>Type:</strong> Hound</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 10 to 12 years</li>
+  <li class='card__detail'><strong>Distinctive Feature:</strong> Long legs and wide, flat ears</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Arctic Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes lagopus<br/>
-      <strong>Location:</strong> Eurasia<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Lifespan:</strong> 7 - 10 years<br/>
-      <strong>Distinctive Feature:</strong> Thick fur that changes colour with season<br/>
-      <strong>Weight:</strong> 1.4kg - 9.4kg (3lbs - 21lbs)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes lagopus</li>
+      <li class='card__detail'><strong>Location:</strong> Eurasia</li>
+  <li class='card__detail'><strong>Type:</strong> Mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Carnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 7 - 10 years</li>
+  <li class='card__detail'><strong>Distinctive Feature:</strong> Thick fur that changes colour with season</li>
+  <li class='card__detail'><strong>Weight:</strong> 1.4kg - 9.4kg (3lbs - 21lbs)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Cross Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes vulpes<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Type:</strong> mammal<br/>
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Lifespan:</strong> 10 to 15 years in captivity, seven years in the wild<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes vulpes</li>
+      <li class='card__detail'><strong>Location:</strong> North-America</li>
+  <li class='card__detail'><strong>Type:</strong> mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Carnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 10 to 15 years in captivity, seven years in the wild</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Darwin`s fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Lycalopex fulvipes<br/>
-      <strong>Location:</strong> South-America<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> Seven years<br/>
-      <strong>Weight:</strong> 4 to 8.7 pounds<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Lycalopex fulvipes</li>
+      <li class='card__detail'><strong>Location:</strong> South-America</li>
+  <li class='card__detail'><strong>Type:</strong> Mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> Seven years</li>
+  <li class='card__detail'><strong>Weight:</strong> 4 to 8.7 pounds</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>English Foxhound</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Canis lupus<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 10 to 13 years<br/>
-      <strong>Weight:</strong> 75 pounds<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class='card__detail'><strong>Location:</strong> Europe</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 10 to 13 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 75 pounds</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Fennec Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes zerda<br/>
-      <strong>Location:</strong> Africa<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 10 - 14 years<br/>
-      <strong>Weight:</strong> 1kg - 1.5kg (2.2lbs - 3.3lbs)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes zerda</li>
+      <li class='card__detail'><strong>Location:</strong> Africa</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 10 - 14 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 1kg - 1.5kg (2.2lbs - 3.3lbs)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes vulpes<br/>
-      <strong>Location:</strong> Africa<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Lifespan:</strong> 3 - 11 years<br/>
-      <strong>Distinctive Feature:</strong> Pointed ears and long bushy tail<br/>
-      <strong>Weight:</strong> 5kg - 11kg (11lbs - 24lbs)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes vulpes</li>
+      <li class='card__detail'><strong>Location:</strong> Africa</li>
+  <li class='card__detail'><strong>Type:</strong> Mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Carnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 3 - 11 years</li>
+  <li class='card__detail'><strong>Distinctive Feature:</strong> Pointed ears and long bushy tail</li>
+  <li class='card__detail'><strong>Weight:</strong> 5kg - 11kg (11lbs - 24lbs)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Fox Snakes</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> P. vulpinus and P. ramspotti<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Lifespan:</strong> approximately 20 years<br/>
-      <strong>Distinctive Feature:</strong> Strongly patterned alternating blotches down the length of their spine.<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> P. vulpinus and P. ramspotti</li>
+      <li class='card__detail'><strong>Location:</strong> North-America</li>
+      <li class='card__detail'><strong>Diet:</strong> Carnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> approximately 20 years</li>
+  <li class='card__detail'><strong>Distinctive Feature:</strong> Strongly patterned alternating blotches down the length of their spine.</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Fox Squirrel</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Sciurus niger<br/>
-      <strong>Location:</strong> Central-America<br/>
-      <strong>Type:</strong> rodent<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 6-12.6 years<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Sciurus niger</li>
+      <li class='card__detail'><strong>Location:</strong> Central-America</li>
+  <li class='card__detail'><strong>Type:</strong> rodent</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 6-12.6 years</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Fox Terrier</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Canis Lupus<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 14 years<br/>
-      <strong>Weight:</strong> 8kg (18lbs)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Canis Lupus</li>
+      <li class='card__detail'><strong>Location:</strong> Europe</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 14 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 8kg (18lbs)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Golden-Crowned Flying Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Acerodon jubatus<br/>
-      <strong>Location:</strong> Asia<br/>
-      <strong>Diet:</strong> Herbivore<br/>
-      <strong>Lifespan:</strong> unknown<br/>
-      <strong>Weight:</strong> 3.1 pounds<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Acerodon jubatus</li>
+      <li class='card__detail'><strong>Location:</strong> Asia</li>
+      <li class='card__detail'><strong>Diet:</strong> Herbivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> unknown</li>
+  <li class='card__detail'><strong>Weight:</strong> 3.1 pounds</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Gray Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Urocyon cinereoargenteus<br/>
-      <strong>Location:</strong> Central-America<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 6-12 years<br/>
-      <strong>Weight:</strong> 3.2-6.4kg (7-14lbs)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Urocyon cinereoargenteus</li>
+      <li class='card__detail'><strong>Location:</strong> Central-America</li>
+  <li class='card__detail'><strong>Type:</strong> Mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 6-12 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 3.2-6.4kg (7-14lbs)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Kit Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes macrotis merriam<br/>
-      <strong>Location:</strong> Central-America<br/>
-      <strong>Type:</strong> mammal<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> seven years in the wild. 12 years in captivity<br/>
-      <strong>Weight:</strong> 4.5 to five pounds<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes macrotis merriam</li>
+      <li class='card__detail'><strong>Location:</strong> Central-America</li>
+  <li class='card__detail'><strong>Type:</strong> mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> seven years in the wild. 12 years in captivity</li>
+  <li class='card__detail'><strong>Weight:</strong> 4.5 to five pounds</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Marble Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes vulpes<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> Up to 15 years<br/>
-      <strong>Weight:</strong> 1-10kg (3-21lbs)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes vulpes</li>
+      <li class='card__detail'><strong>Location:</strong> North-America</li>
+  <li class='card__detail'><strong>Type:</strong> Mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> Up to 15 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 1-10kg (3-21lbs)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Red Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes vulpes<br/>
-      <strong>Location:</strong> Africa<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 2-4 years in the wild, 10-12 in captivity<br/>
-      <strong>Weight:</strong> 6.5-24 lbs<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes vulpes</li>
+      <li class='card__detail'><strong>Location:</strong> Africa</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 2-4 years in the wild, 10-12 in captivity</li>
+  <li class='card__detail'><strong>Weight:</strong> 6.5-24 lbs</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Smooth Fox Terrier</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Canis lupus<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 12-15 years<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class='card__detail'><strong>Location:</strong> Europe</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 12-15 years</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Tibetan Fox</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Vulpes ferrilata<br/>
-      <strong>Location:</strong> Asia<br/>
-      <strong>Type:</strong> Mammal<br/>
-      <strong>Diet:</strong> Carnivore<br/>
-      <strong>Lifespan:</strong> 8-10 years<br/>
-      <strong>Weight:</strong> 8-12 lbs (4-5 kg)<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Vulpes ferrilata</li>
+      <li class='card__detail'><strong>Location:</strong> Asia</li>
+  <li class='card__detail'><strong>Type:</strong> Mammal</li>
+      <li class='card__detail'><strong>Diet:</strong> Carnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 8-10 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 8-12 lbs (4-5 kg)</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Toy Fox Terrier</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Canis lupus<br/>
-      <strong>Location:</strong> North-America<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 11-14 years<br/>
-      <strong>Weight:</strong> 13 pounds<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class='card__detail'><strong>Location:</strong> North-America</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 11-14 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 13 pounds</li>
+    </ul>
   </p>
 </li>
 <li class='cards__item'>
   <div class='card__title'>Wire Fox Terrier</div>
   <p class='card__text'>
-      <strong>Scientific Name:</strong> Canis lupus<br/>
-      <strong>Location:</strong> Europe<br/>
-      <strong>Diet:</strong> Omnivore<br/>
-      <strong>Lifespan:</strong> 13 - 14 years<br/>
-      <strong>Weight:</strong> 19 lbs<br/>
+    <ul class='card__details'>
+      <li class='card__detail'><strong>Scientific Name:</strong> Canis lupus</li>
+      <li class='card__detail'><strong>Location:</strong> Europe</li>
+      <li class='card__detail'><strong>Diet:</strong> Omnivore</li>
+      <li class='card__detail'><strong>Lifespan:</strong> 13 - 14 years</li>
+  <li class='card__detail'><strong>Weight:</strong> 19 lbs</li>
+    </ul>
   </p>
 </li>
 

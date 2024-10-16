@@ -25,21 +25,23 @@ def serialize_animal(animal_obj):
     distinctive_feature = animal_obj['characteristics'].get('distinctive_feature', None)
     weight = animal_obj['characteristics'].get('weight', None)
 
-    output += f"<li class='cards__item'>\n"
+    output = f"<li class='cards__item'>\n"
     output += f"  <div class='card__title'>{name}</div>\n"
     output += f"  <p class='card__text'>\n"
-    output += f"      <strong>Scientific Name:</strong> {scientific_name}<br/>\n"
-    output += f"      <strong>Location:</strong> {first_location}<br/>\n"
+    output += f"    <ul class='card__details'>\n"
+    output += f"      <li class='card__detail'><strong>Scientific Name:</strong> {scientific_name}</li>\n"
+    output += f"      <li class='card__detail'><strong>Location:</strong> {first_location}</li>\n"
 
     if animal_type:
-        output += f"      <strong>Type:</strong> {animal_type}<br/>\n"
+        output += f"  <li class='card__detail'><strong>Type:</strong> {animal_type}</li>\n"
 
-    output += f"      <strong>Diet:</strong> {diet}<br/>\n"
-    output += f"      <strong>Lifespan:</strong> {lifespan}<br/>\n"
+    output += f"      <li class='card__detail'><strong>Diet:</strong> {diet}</li>\n"
+    output += f"      <li class='card__detail'><strong>Lifespan:</strong> {lifespan}</li>\n"
     if distinctive_feature:
-        output += f"      <strong>Distinctive Feature:</strong> {distinctive_feature}<br/>\n"
+        output += f"  <li class='card__detail'><strong>Distinctive Feature:</strong> {distinctive_feature}</li>\n"
     if weight:
-        output += f"      <strong>Weight:</strong> {weight}<br/>\n"
+        output += f"  <li class='card__detail'><strong>Weight:</strong> {weight}</li>\n"
+    output += f"    </ul>\n"
     output += f"  </p>\n"
     output += f"</li>\n"
 
