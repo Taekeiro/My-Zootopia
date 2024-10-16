@@ -22,14 +22,17 @@ for animal in animals_data:
     first_location = animal.get('locations', ['N/A'])[0]  # Get first location
     animal_type = animal['characteristics'].get('type', None)
 
-    output += f"<li class='cards__item'><div class='card__title'>Name: {name}</div>"
-    output += f"<div class='card__text'>Diet: {diet}</div>"
-    output += f"<div class='card__text'>Location: {first_location}</div>"
+    output += f"<li class='cards__item'>\n"
+    output += f"  <div class='card__title'>{name}</div>\n"
+    output += f"  <p class='card__text'>\n"
+    output += f"      <strong>Location:</strong> {first_location}<br/>\n"
 
     if animal_type:  # Only include 'Type' if it exists
-        output += f"<div class='card__text'>Type: {animal_type}</div>"
+        output += f"      <strong>Type:</strong> {animal_type}<br/>\n"
 
-    output += "</li>\n"
+    output += f"      <strong>Diet:</strong> {diet}<br/>\n"
+    output += f"  </p>\n"
+    output += f"</li>\n"
 
 html_content = html_template.replace('__REPLACE_ANIMALS_INFO__', output)
 
