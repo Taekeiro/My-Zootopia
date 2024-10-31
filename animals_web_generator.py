@@ -1,11 +1,10 @@
-import json
 import requests
 
-API_KEY = '8+G0fuBSpOuzmS2yHx/FQQ==xjN3x9mzczt93YbP'  # Replace with your actual API key from API Ninjas
+API_KEY = '8+G0fuBSpOuzmS2yHx/FQQ==xjN3x9mzczt93YbP'  # Replace with your actual API key
 API_URL = 'https://api.api-ninjas.com/v1/animals'
 
 
-def fetch_animal_data(search_query="Fox"):
+def fetch_animal_data(search_query):
     """Fetches animal data from API Ninjas based on a search query."""
     headers = {'X-Api-Key': API_KEY}
     response = requests.get(f"{API_URL}?name={search_query}", headers=headers)
@@ -77,32 +76,44 @@ animal_name = input("Enter a name of an animal: ")
 # Step 2: Fetch the animals data from the API based on user input
 animals_data = fetch_animal_data(animal_name)
 
-# Step 3: Display available skin_type values to the user
+# Step 3: Check if any animals were returned, else display an error message in the HTML
+if not animals_data:
+    html_content = f"<h2>The animal '{animal_name}' doesn't exist.</h2>"
+    with open('animals_output.html', 'w') as output_file:
+        output_file.write(html_content)
+    print("Website was successfully generated to the file animals_output.html.")
+    exit()
+
+# Step 4: Display available skin_type values to the user, handle cases with no skin types
 available_skin_types = get_available_skin_types(animals_data)
-print("Available Skin Types:")
-for idx, skin_type in enumerate(available_skin_types, 1):
-    print(f"{idx}. {skin_type}")
+if available_skin_types:
+    print("Available Skin Types:")
+    for idx, skin_type in enumerate(available_skin_types, 1):
+        print(f"{idx}. {skin_type}")
 
-# Step 4: Prompt the user to select a skin_type
-selected_index = int(input(f"Select a skin type (1-{len(available_skin_types)}): ")) - 1
-selected_skin_type = available_skin_types[selected_index]
-print(f"You selected: {selected_skin_type}")
+    # Prompt the user to select a skin_type
+    selected_index = int(input(f"Select a skin type (1-{len(available_skin_types)}): ")) - 1
+    selected_skin_type = available_skin_types[selected_index]
+    print(f"You selected: {selected_skin_type}")
 
-# Step 5: Filter animals by the selected skin_type
-filtered_animals = filter_animals_by_skin_type(animals_data, selected_skin_type)
+    # Filter animals by the selected skin_type
+    filtered_animals = filter_animals_by_skin_type(animals_data, selected_skin_type)
+else:
+    print("No skin types found for this animal search. Displaying all results.")
+    filtered_animals = animals_data
 
-# Step 6: Load the HTML template
+# Step 5: Load the HTML template
 html_template = load_template('animals_template.html')
 
-# Step 7: Generate a string with the serialized animals' data for the selected skin_type
+# Step 6: Generate a string with the serialized animals' data
 output = ''
 for animal_obj in filtered_animals:
     output += serialize_animal(animal_obj)
 
-# Step 8: Replace the placeholder in the template with the generated animals' data
+# Step 7: Replace the placeholder in the template with the generated animals' data
 html_content = html_template.replace('__REPLACE_ANIMALS_INFO__', output)
 
-# Step 9: Save the final HTML to a new file
+# Step 8: Save the final HTML to a new file
 with open('animals_output.html', 'w') as output_file:
     output_file.write(html_content)
 
