@@ -71,11 +71,11 @@ def filter_animals_by_skin_type(animals_data, selected_skin_type):
             animal['characteristics'].get('skin_type', 'Unknown') == selected_skin_type]
 
 
-# Step 1: Fetch the animals data from the API
-animals_data = fetch_animal_data("Fox")
+# Step 1: Prompt the user for an animal name
+animal_name = input("Enter a name of an animal: ")
 
-# Step 2: Load the HTML template
-html_template = load_template('animals_template.html')
+# Step 2: Fetch the animals data from the API based on user input
+animals_data = fetch_animal_data(animal_name)
 
 # Step 3: Display available skin_type values to the user
 available_skin_types = get_available_skin_types(animals_data)
@@ -91,16 +91,19 @@ print(f"You selected: {selected_skin_type}")
 # Step 5: Filter animals by the selected skin_type
 filtered_animals = filter_animals_by_skin_type(animals_data, selected_skin_type)
 
-# Step 6: Generate a string with the serialized animals' data for the selected skin_type
+# Step 6: Load the HTML template
+html_template = load_template('animals_template.html')
+
+# Step 7: Generate a string with the serialized animals' data for the selected skin_type
 output = ''
 for animal_obj in filtered_animals:
     output += serialize_animal(animal_obj)
 
-# Step 7: Replace the placeholder in the template with the generated animals' data
+# Step 8: Replace the placeholder in the template with the generated animals' data
 html_content = html_template.replace('__REPLACE_ANIMALS_INFO__', output)
 
-# Step 8: Save the final HTML to a new file
+# Step 9: Save the final HTML to a new file
 with open('animals_output.html', 'w') as output_file:
     output_file.write(html_content)
 
-print(f"HTML file generated successfully for animals with skin type: {selected_skin_type}.")
+print("Website was successfully generated")
