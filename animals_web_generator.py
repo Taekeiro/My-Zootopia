@@ -1,7 +1,7 @@
 import json
 import requests
 
-API_KEY = '8+G0fuBSpOuzmS2yHx/FQQ==xjN3x9mzczt93YbP'  # Replace with your actual API key from API Ninjas
+API_KEY = '8+G0fuBSpOuzmS2yHx/FQQ==xjN3x9mzczt93YbP' 
 API_URL = 'https://api.api-ninjas.com/v1/animals'
 
 
