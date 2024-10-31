@@ -1,18 +1,4 @@
-import requests
-
-API_KEY = '8+G0fuBSpOuzmS2yHx/FQQ==xjN3x9mzczt93YbP'  # Replace with your actual API key
-API_URL = 'https://api.api-ninjas.com/v1/animals'
-
-
-def fetch_animal_data(search_query):
-    """Fetches animal data from API Ninjas based on a search query."""
-    headers = {'X-Api-Key': API_KEY}
-    response = requests.get(f"{API_URL}?name={search_query}", headers=headers)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error fetching data: {response.status_code}")
-        return []
+import data_fetcher
 
 
 def load_template(template_path):
@@ -73,8 +59,8 @@ def filter_animals_by_skin_type(animals_data, selected_skin_type):
 # Step 1: Prompt the user for an animal name
 animal_name = input("Enter a name of an animal: ")
 
-# Step 2: Fetch the animals data from the API based on user input
-animals_data = fetch_animal_data(animal_name)
+# Step 2: Fetch the animals data using the data_fetcher module
+animals_data = data_fetcher.fetch_data(animal_name)
 
 # Step 3: Check if any animals were returned, else display an error message in the HTML
 if not animals_data:
@@ -117,4 +103,4 @@ html_content = html_template.replace('__REPLACE_ANIMALS_INFO__', output)
 with open('animals_output.html', 'w') as output_file:
     output_file.write(html_content)
 
-print("Website was successfully generated to the file animals_output.html.")
+print("Website was successfully generated")
